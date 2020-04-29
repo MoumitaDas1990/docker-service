@@ -1,0 +1,15 @@
+# docker-compose.yml
+version: "3.3"
+services:
+  cicd_war:
+    build:
+      context: ./services
+      dockerfile: Dockerfile_cicd_war
+    hostname: cicd_war
+    ports:
+      - 2202:2201
+
+  docker_jar:
+    build:
+      context: ./services
+      dockerfile: Dockerfile_docker_jar
